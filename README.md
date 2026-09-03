@@ -26,17 +26,17 @@ The application allows users to explore air pollution data by country, compare p
 
 ## 🤖 Machine Learning
 
-The project uses a **Random Forest Classifier** to predict the Air Quality Category from pollutant-related data. The dataset is preprocessed and the AQI category is encoded before model training. fileciteturn0file0L51-L69
+The project uses a **Random Forest Classifier** to predict the Air Quality Category from pollutant-related data. The dataset is preprocessed and the AQI category is encoded before model training.
 
 ## 📊 Data Analysis
 
-The application provides country-level analysis where users can select a country and compare pollutant values using **Average, Sum, or Median** aggregation. Logarithmic-scale charts are used to make pollutants with significantly different value ranges easier to compare. fileciteturn0file0L117-L152
+The application provides country-level analysis where users can select a country and compare pollutant values using **Average, Sum, or Median** aggregation. Logarithmic-scale charts are used to make pollutants with significantly different value ranges easier to compare.
 
 ## 🔄 Project Workflow
 
 **Data → Cleaning → AQI Classification → Exploratory Analysis → Visualization → Machine Learning → Prediction**
 
-The AQI categories are generated during preprocessing and stored in the processed dataset for use by the prediction application. fileciteturn0file1L21-L22 fileciteturn0file1L130-L138
+The AQI categories are generated during preprocessing and stored in the processed dataset for use by the prediction application.
 
 ## 🎯 Objective
 
