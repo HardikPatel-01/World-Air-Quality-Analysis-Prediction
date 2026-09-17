@@ -11,27 +11,6 @@ st.set_page_config(page_title="Air Quality Index", layout="wide")
 # Simple CSS
 st.markdown("""
 <style>
-    .sidebar-button {
-        display: block;
-        width: 100%;
-        padding: 15px;
-        margin: 10px 0;
-        font-size: 16px;
-        font-weight: bold;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        background-color: #f0f0f0;
-        color: #333;
-        transition: all 0.2s;
-    }
-    .sidebar-button:hover {
-        background-color: #e0e0e0;
-    }
-    .sidebar-button.active {
-        background-color: #1f77b4;
-        color: white;
-    }
     h1 { color: #1f77b4; font-size: 2.5em; margin-bottom: 10px; }
     h2 { color: #1f77b4; font-size: 1.8em; margin-top: 15px; }
     h3 { color: #333; }
@@ -40,27 +19,27 @@ st.markdown("""
 
 # Sidebar Navigation
 st.sidebar.markdown("### Navigation")
-
-col1, col2, col3, col4 = st.sidebar.columns(1)
-
-if st.sidebar.button("🏠 HOME", use_container_width=True, key="home_btn"):
-    st.session_state.page = "Home"
-
-if st.sidebar.button("📊 DATASET", use_container_width=True, key="dataset_btn"):
-    st.session_state.page = "Dataset"
-
-if st.sidebar.button("🤖 PREDICTION", use_container_width=True, key="pred_btn"):
-    st.session_state.page = "Prediction"
-
-if st.sidebar.button("📈 GRAPH", use_container_width=True, key="graph_btn"):
-    st.session_state.page = "Graph"
-
 st.sidebar.markdown("---")
-st.sidebar.info("💡 Select a page from above")
 
 # Initialize session state
 if 'page' not in st.session_state:
     st.session_state.page = "Home"
+
+# Buttons
+if st.sidebar.button("🏠 HOME", use_container_width=True):
+    st.session_state.page = "Home"
+
+if st.sidebar.button("📊 DATASET", use_container_width=True):
+    st.session_state.page = "Dataset"
+
+if st.sidebar.button("🤖 PREDICTION", use_container_width=True):
+    st.session_state.page = "Prediction"
+
+if st.sidebar.button("📈 GRAPH", use_container_width=True):
+    st.session_state.page = "Graph"
+
+st.sidebar.markdown("---")
+st.sidebar.info("💡 Select a page from above")
 
 page = st.session_state.page
 
